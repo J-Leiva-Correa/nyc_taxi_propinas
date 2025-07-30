@@ -9,9 +9,10 @@ if project_root not in sys.path:
 print("📂 Ruta añadida al sys.path:", project_root)
 
 # ✅ Importaciones después del path
-from src.dataset import load_data
-from src.build_features import build_features
-from src.predict import evaluate
+from src.data.dataset import load_data
+from src.features.build_features import build_features
+from src.modeling.predict import evaluate
+
 
 def evaluate_model_on_months(months, base_path, model_path):
     resultados = []
