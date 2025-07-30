@@ -48,7 +48,9 @@ nyc_taxi_propinas/
 python probar_dataset.py
 
 2) Evaluar por mes:
+
 python scripts/evaluate_months.py
+
 Imprime F1-score para:
 
 Enero
