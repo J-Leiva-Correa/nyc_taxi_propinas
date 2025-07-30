@@ -7,38 +7,41 @@ Consiste en construir un clasificador que prediga si un viaje en taxi incluirá 
 
 ## 📁 Estructura del proyecto
 
+
+```
 nyc_taxi_propinas/
 ├── data/
-│ └── raw/ ← Archivos .parquet
+│   └── raw/                          ← Archivos .parquet (no incluidos)
 ├── models/
-│ └── modelo_random_forest.pkl
+│   └── modelo_random_forest.pkl      ← Modelo entrenado serializado
 ├── notebooks/
-│ └── 00_nyc_taxi_model.ipynb (Notebook con proceso unificado y conclusiones.)
+│   └── 00_nyc_taxi_model.ipynb       ← Notebook con proceso unificado y conclusiones
 ├── scripts/
-│ ├── evaluate_months.py 
-│ └── plot_resultados.py 
+│   ├── evaluate_months.py            ← Evalúa el modelo en distintos meses
+│   └── plot_resultados.py            ← Genera gráfico de F1-score por mes
 ├── src/
-│ ├── config.py
-│ ├── data/
-│ │ └── dataset.py
-│ ├── features/
-│ │ └── build_features.py
-│ ├── modeling/
-│ │ ├── train.py
-│ │ └── predict.py
-│ └── visualization/
-│ └── plots.py
-├── probar_dataset.py ← Script para cargar, entrenar y probar
-├── README.md 
-└── requirements.txt
+│   ├── config.py                     ← Parámetros generales y rutas
+│   ├── data/
+│   │   └── dataset.py                ← Carga y preparación de datos
+│   ├── features/
+│   │   └── build_features.py         ← Ingeniería de variables
+│   ├── modeling/
+│   │   ├── train.py                  ← Entrenamiento del modelo
+│   │   └── predict.py                ← Predicción y evaluación
+│   └── visualization/
+│       └── plots.py                 ← Visualización de métricas
+├── probar_dataset.py                 ← Script principal para prueba unificada
+├── requirements.txt                  ← Requisitos del entorno
+└── README.md                         ← Descripción del proyecto y guía de uso
+```
 
 ## ⚙️ Requisitos del proyecto
 
-- Python 3.8+
-- pandas
-- scikit-learn
-- joblib
-- matplotlib
+- Python 3.8
+- pandas 1.3
+- scikit-learn 1.0
+- joblib 1.1
+- matplotlib 3.4
 
 
 ## Instrucciones para ejecutar el proyecto.
